@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>@ViewBag.Title - Beto-Trans</title>
+<meta name="Description" content="Firma BETO-TRANS specjalizuje się w wydobywaniu, uszlachetnianiu i transporcie kruszyw do celów budownictwa, drogownictwa oraz celów ogrodniczych. Zajmuje się także budową dróg, świadczy usługi koparką, ładowarką oraz HDS." />
+<meta name="keywords" content="Sprzedaż kruszyw do celów budownictwa, piasek płukany 0-2, żwir 2-8, żwir 8-16, żwir 2-16, mieszanka 0-16, pospółka, piasek kopalniany, podsyp, Sprzedaż kruszyw do celów drogownictwa, kruszywo kwarcytowe, kruszywo wapienne, kruszywo dolomitowe, Sprzedaż materiałów do celów ogrodniczych, żwir 16-32, otoczaki, głazy, ziemia, torf, Sprzedaż materiałów budowlanych: cement, Usługi transportowe samochodami samowyładowczymi, Usługi HDS, Wynajem koparki i ładowarki" />
+<meta name="Author" content="IT Consulting Kamil Wysocki" />
+<meta name="Robots" content="ALL" />
+<meta name="revisit-after" content="10" />
+<meta name="Classification" content="budownictwo" />
+<meta name="Abstract" content="Sprzedaż kruszyw" />
+
+@Styles.Render("~/Content/css")
+@Styles.Render("~/Content/jquery-ui")
+@Styles.Render("~/Content/fancybox/css")
+
+@Scripts.Render("~/bundles/modernizr")
+
+
+@RenderSection("head", required: false)
+</head>
+
+<body>
+
+
+<div class="pds">
+	<div><img src="@Url.Content("~/Images/t1.jpg")" alt="" usemap="#top" /></div>
+    <div><img src="@Url.Content("~/Images/piasek333.jpg")" alt="" /></div>
+    <div class="menu">
+            <ul>
+                <li><a href="@Url.Action("Index", "Home")">Strona główna</a></li>
+                <li><a href="#">O firmie</a></li>
+                <li><a href="#">Jak działamy</a></li>
+                <li><a href="@Url.Action("Offer", "Home")">Oferta</a></li>
+                <li><a href="@Url.Action("Contact", "Home")">Kontakt</a></li>
+            </ul>  
+    </div>
+	<div class="s">
+		<div class="left">
+			<div>
+                <img src="@Url.Content("~/Images/obr1.png")" alt=""  style="margin-top:30px;"/>
+			</div>
+            <div data-bind="attr:{'data-src' : '@Url.Content("~/Images/maszyny/wiertnica2.JPG")', 'data-title' : 'wiercenia'}" class="modalPicture">
+                <img src="@Url.Content("~/Images/maszyny/mini/wiertnica2_191x109.JPG")" alt="" title="wiercenia" style="margin-top:30px;"/>
+            </div>
+			<div><img src="@Url.Content("~/Images/obr2.png")" alt="" style="margin-top:30px;"/></div>
+			<div><img src="@Url.Content("~/Images/obr3.png")" alt="" style="margin-top:30px;"/></div>
+            <div data-bind="attr:{'data-src' : '@Url.Content("~/Images/maszyny/urzadzenia_do_uszlachetniania_kopaliny.JPG")', 'data-title' : 'urządzenia do uszlachetniania kopaliny'}" class="modalPicture">
+                <img src="@Url.Content("~/Images/maszyny/mini/urzadzenia_do_uszlachetniania_kopaliny_191x108.JPG")" alt="" title="urządzenia do uszlachetniania kopaliny" style="margin-top:30px;"/>
+            </div>
+            <div data-bind="attr:{'data-src' : '@Url.Content("~/Images/maszyny/sortownik_kruszarki.JPG")', 'data-title' : 'sortownik i kruszarki'}" class="modalPicture">
+                <img src="@Url.Content("~/Images/maszyny/mini/sortownik_kruszarki_191x108.JPG")" alt="" title="sortownik i kruszarki" style="margin-top:30px;"/>
+            </div>
+		</div>
+		<!--
+		<div class="left">
+			
+            <div><img src="images/m1.gif" alt="" /></div>
+            <div class="m-tlo">
+           
+            
+            	<ul class="m">
+                    <li><a href="#">Strona 1</a></li>
+                    <li><a href="#">Strona 2</a></li>
+                    <li><a href="#">Strona 3</a></li>
+                    <li><a href="#">Strona 4</a></li>
+                    <li><a href="#">Strona 5</a></li>                            	
+       		  </ul>            
+            </div>
+          <div><img src="images/m3.gif" alt="" /></div>
+            
+        </div>
+		-->
+
+            @RenderSection("Body", required: false)
+            <section class="">
+                @RenderBody()
+            </section>
+
+		
+		
+		<div style="clear:both;"></div>
+	</div>
+	<div class="stopka">Copyright by www.betotrans.pl Wszystkie prawa zastrzeżone.</div>
+    
+    
+    <map name="top" id="top">
+        <area shape="rect" coords="49,52,314,122" href="@Url.Action("Index", "Home")" alt="" />
+        <area shape="rect" coords="623,67,752,104" href="@Url.Action("Offer", "Home")" alt="" />
+        <area shape="rect" coords="760,70,835,104" href="#mapa" alt="" />
+        <area shape="rect" coords="850,71,940,104" href="@Url.Action("Contact", "Home")" alt="" />
+    </map>
+    
+</div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryui")
+        @Scripts.Render("~/bundles/knockout")
+        @Scripts.Render("~/bundles/fancybox")
+        @RenderSection("scripts", required: false)
+
+
+<script type="text/javascript">
+
+    var OfertaImages = function (miniSrc, src, title, styleClass) {
+        var self = this;
+        self.miniSrc = miniSrc;
+        self.src = src;
+        self.title = title;
+        self.styleClass = styleClass;
+    };
+
+    var podzielNaWierszeKolumny = function (listaDoPodzialu) {
+        var itemsPerRow = 3, rowIndex = 0, listaWierszeKolumny = [];
+
+        for (var index = 0; index < listaDoPodzialu.length; index++) {
+            if (!listaWierszeKolumny[rowIndex])
+                listaWierszeKolumny[rowIndex] = [];
+
+            listaWierszeKolumny[rowIndex].push(listaDoPodzialu[index]);
+
+            if (listaWierszeKolumny[rowIndex].length == itemsPerRow)
+                rowIndex++;
+        }
+
+        return listaWierszeKolumny;
+    }
+
+    var OfertaImageViewModel = function () {
+        var self = this;
+
+        self.ofertaBudowlanaImageList = ko.observableArray([
+            new OfertaImages('@Url.Content("~/Images/kruszywa/mini/pospolka_195x145.jpg")', '@Url.Content("~/Images/kruszywa/pospolka.jpg")', 'pospółka', 'ofertaImage'),
+            new OfertaImages('@Url.Content("~/Images/kruszywa/mini/piasek_kopalniany_195x145.jpg")', '@Url.Content("~/Images/kruszywa/piasek_kopalniany.jpg")', 'piasek kopalniany', 'ofertaImage'),
+            new OfertaImages('@Url.Content("~/Images/kruszywa/mini/piasek_plukany_0-2_195x145.jpg")', '@Url.Content("~/Images/kruszywa/piasek_plukany_0-2.jpg")', 'piasek płukany 0-2', 'ofertaImage'),
+            new OfertaImages('@Url.Content("~/Images/kruszywa/mini/piasek_plukany_05-2_195x145.jpg")', '@Url.Content("~/Images/kruszywa/piasek_plukany_05-2.jpg")', 'piasek płukany 0,5-2', 'ofertaImage'),
+            new OfertaImages('@Url.Content("~/Images/kruszywa/mini/mieszanka_do_betonu_0-16_195x145.jpg")', '@Url.Content("~/Images/kruszywa/mieszanka_do_betonu_0-16.jpg")', 'mieszanka do betonu 0-16', 'ofertaImage'),
+            new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_2-8_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_2-8.jpg")', 'żwir 2-8', 'ofertaImage'),
+            new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_2-16_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_2-16.jpg")', 'żwir 2-16', 'ofertaImage'),
+            new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_8-16_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_8-16.jpg")', 'żwir 8-16', 'ofertaImage'),
+            new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_16-35_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_16-35.jpg")', 'żwir 16-35', 'ofertaImage'),
+            
+
+            
+        ]);
+
+        self.ofertaOgrodniczaImageList = ko.observableArray([
+            new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_16-32_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_16-32.jpg")', 'żwir 16-32', 'ofertaImage'),
+            new OfertaImages('@Url.Content("~/Images/kruszywa/mini/glazy_195x145.jpg")', '@Url.Content("~/Images/kruszywa/glazy.jpg")', 'głazy', 'ofertaImage'),
+            new OfertaImages('@Url.Content("~/Images/kruszywa/mini/torf_195x145.jpg")', '@Url.Content("~/Images/kruszywa/torf.jpg")', 'torf', 'ofertaImage'),
+            
+        ]);
+
+        self.ofertaBudowlanaWierszeKolumny = ko.computed(function () {
+            return podzielNaWierszeKolumny(self.ofertaBudowlanaImageList());
+        });
+
+        self.ofertaOgrodniczaWierszeKolumny = ko.computed(function () {
+            return podzielNaWierszeKolumny(self.ofertaOgrodniczaImageList());
+        });
+
+    };
+
+    $(document).ready(function () {
+        ko.applyBindings(new OfertaImageViewModel());
+
+        $(".fancybox").fancybox({
+            helpers: {
+                overlay: {
+                    css: {
+                        'background': 'rgba(58, 42, 45, 0.95)'
+                    }
+                }
+            }
+        });
+
+        $('.modalPicture').click(function (event) {
+            event.stopPropagation();
+
+            var self = $(this);
+            var title = self.data('title');
+            var src = self.data('src');
+            var img = new Image();
+            img.src = src;
+
+            img.onload = function () {
+                var imageSelf = this;
+                var windowWidth = $(window).width();
+                var windowHeight = $(window).height();
+                var oryginalImageWidth = imageSelf.width;
+                var oryginalImageHeight = imageSelf.height;
+                var originalRatio = oryginalImageWidth / oryginalImageHeight;
+
+                var newImageWidth = oryginalImageWidth;
+                var newImageHeigth = oryginalImageHeight;
+                var widthModalFrame = 40;
+                var heigthmodalFrame = 90;
+
+                var modalWidth = newImageWidth + widthModalFrame;
+                var modalHeigth = newImageHeigth + heigthmodalFrame;
+
+                // czy trzeba zrobić skalowanie?
+                if (modalWidth > windowWidth || modalHeigth > windowHeight) {
+                    // szukam boku którego najbardziej trzeba skrócić
+                    var widthOutOfSreen = windowWidth - modalWidth;
+                    if (widthOutOfSreen > 0) {
+                        widthOutOfSreen = 0;
+                    };
+                    widthOutOfSreen = Math.abs(widthOutOfSreen);
+                    var heightOutOfSreen = windowHeight - modalHeigth;
+                    if (heightOutOfSreen > 0) {
+                        heightOutOfSreen = 0;
+                    };
+                    heightOutOfSreen = Math.abs(heightOutOfSreen);
+                    if (heightOutOfSreen > widthOutOfSreen) {
+                        newImageHeigth = newImageHeigth - heightOutOfSreen;
+                        var widthToCut = (oryginalImageWidth - (originalRatio * (oryginalImageHeight - heightOutOfSreen)));
+                        newImageWidth = newImageWidth - widthToCut;
+                    }
+                    else {
+                        newImageWidth = newImageWidth - widthOutOfSreen;
+                        var heightToCut = -((oryginalImageWidth - widthOutOfSreen - originalRatio * oryginalImageHeight) / originalRatio);
+                        newImageHeigth = newImageHeigth - heightToCut;
+                    };
+                    modalWidth = newImageWidth + widthModalFrame;
+                    modalHeigth = newImageHeigth + heigthmodalFrame;
+                };
+
+
+
+                var dialog = $('<div onclick="$(\'.ui-icon-closethick\').click();"><img width="' + newImageWidth + '" height="' + newImageHeigth + '" alt="' + title + '" src="' + src + '"></div>')
+                .dialog({
+                    modal: true,
+                    width: modalWidth,
+                    height: modalHeigth,
+                    resizable: false,
+                    title: title
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>

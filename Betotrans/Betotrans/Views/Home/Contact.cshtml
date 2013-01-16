@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Kontakt";
+}
+    <style type="text/css">
+      #map_canvas { height: 100% }
+    </style>
+
+@section head{
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrbpQrvzOABfl2_01ZTwbXcKStvxo89XI&sensor=false">
+    </script>
+}
+
+@section scripts{
+    <script type="text/javascript">
+        function initialize() {
+            var xy = new google.maps.LatLng(51.995121, 20.286233);
+
+            var mapOptions = {
+                center: xy,
+                zoom: 16,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                scrollwheel : false,
+                
+                panControl : true,
+                scaleControl : true
+            };
+
+            var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: xy,
+                map: map,
+                title: 'Beto-Trans'
+            });
+        }
+
+        $(document).ready(function () {
+            initialize();
+        });
+    </script>
+}
+
+@section body{
+        <div class="right">
+            <div class="tekst">
+                <h1 class="ng">Kontakt</h1>
+                    <div >
+                        <p>
+                            <strong style="font-size:15px">P.P.H.U. BETO-TRANS Józef Piejak </strong><br /><br />
+                            96-332 Radziwiłłów <br /><br />
+                            ul. Środkowa 38 <br /><br />
+                            NIP 836-100-18-87<br /><br />
+                            Właściciel: 604 281 572 – Józef Piejak 
+                        </p>
+                    </div>
+                    <br />
+                    <div  id="map_canvas" style="width:100%; height:600px">
+                    </div>
+            </div>
+        </div>
+}
