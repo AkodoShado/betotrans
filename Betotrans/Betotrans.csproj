@@ -118,37 +118,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
-    </Reference>
     <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -263,6 +235,8 @@
     <None Include="Properties\PublishProfiles\dcs.pl.pubxml" />
     <None Include="Scripts\jquery-1.8.3.intellisense.js" />
     <Content Include="Images\arrow.gif" />
+    <Content Include="Images\droga_do_kopalni.JPG" />
+    <Content Include="Images\droga_do_kopalni_191x108.png" />
     <Content Include="Images\koparka.jpg" />
     <Content Include="Images\kruszywa\glazy.jpg" />
     <Content Include="Images\kruszywa\kruszywa_1.jpg" />
@@ -303,16 +277,25 @@
     <Content Include="Images\m2.gif" />
     <Content Include="Images\m3.gif" />
     <Content Include="Images\m3.jpg" />
+    <Content Include="Images\mapa.jpg" />
+    <Content Include="Images\mapa_191x108.png" />
+    <Content Include="Images\maszyny\kopalnia_Korabiewice_3.JPG" />
+    <Content Include="Images\maszyny\koparka_na_zwirowni.JPG" />
+    <Content Include="Images\maszyny\mini\kopalnia_Korabiewice_3_350_263.JPG" />
+    <Content Include="Images\maszyny\mini\koparka_na_zwirowni_350x222.JPG" />
+    <Content Include="Images\maszyny\mini\Scania_191x108.jpg" />
     <Content Include="Images\maszyny\mini\sortownik_kruszarki_191x108.JPG" />
+    <Content Include="Images\maszyny\mini\Steyer_przy_odsniezaniu_350x233.JPG" />
     <Content Include="Images\maszyny\mini\urzadzenia_do_uszlachetniania_kopaliny_191x108.JPG" />
     <Content Include="Images\maszyny\mini\wiertnica2_191x109.JPG" />
+    <Content Include="Images\maszyny\mini\zaladunek_kruszywa_350x233.JPG" />
+    <Content Include="Images\maszyny\Scania.jpg" />
     <Content Include="Images\maszyny\sortownik_kruszarki.JPG" />
+    <Content Include="Images\maszyny\Steyer_przy_odsniezaniu.JPG" />
     <Content Include="Images\maszyny\urzadzenia_do_uszlachetniania_kopaliny.JPG" />
     <Content Include="Images\maszyny\wiertnica2.JPG" />
+    <Content Include="Images\maszyny\zaladunek_kruszywa.JPG" />
     <Content Include="Images\ng.jpg" />
-    <Content Include="Images\obr1.png" />
-    <Content Include="Images\obr2.png" />
-    <Content Include="Images\obr3.png" />
     <Content Include="Images\piasek.jpg" />
     <Content Include="Images\piasek2.jpg" />
     <Content Include="Images\piasek3.jpg" />
@@ -346,7 +329,9 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -355,15 +340,6 @@
     </Content>
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Offer.cshtml" />
