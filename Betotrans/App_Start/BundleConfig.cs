@@ -59,7 +59,7 @@ namespace Betotrans
             bundles.Add(new StyleBundle("~/Content/jquery-ui")
                 .Include("~/Content/themes/ui-lightness/jquery-ui.css"));
 
-            bundles.Add(new StyleBundle("~/Content/fancybox/css")
+            bundles.Add(new StyleBundle("~/Content/fancyboxCss")
                 .Include("~/Content/jquery.fancybox.css",
                         "~/Content/jquery.fancybox-buttons.css",
                         "~/Content/jquery.fancybox-thumbs.css"));
