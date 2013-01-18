@@ -40,3 +40,56 @@
             </div>
 		</div>
 }
+
+
+@section scripts{
+    <script type="text/javascript">
+        var OfertaImages = function (miniSrc, src, title, styleClass) {
+            var self = this;
+            self.miniSrc = miniSrc;
+            self.src = src;
+            self.title = title;
+            self.styleClass = styleClass;
+        };
+
+        var OfertaImageViewModel = function () {
+            var self = this;
+
+            self.ofertaBudowlanaImageList = ko.observableArray([
+                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/pospolka_195x145.jpg")', '@Url.Content("~/Images/kruszywa/pospolka.jpg")', 'pospółka', 'ofertaImage'),
+                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/piasek_kopalniany_195x145.jpg")', '@Url.Content("~/Images/kruszywa/piasek_kopalniany.jpg")', 'piasek kopalniany', 'ofertaImage'),
+                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/piasek_plukany_0-2_195x145.jpg")', '@Url.Content("~/Images/kruszywa/piasek_plukany_0-2.jpg")', 'piasek płukany 0-2', 'ofertaImage'),
+                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/piasek_plukany_05-2_195x145.jpg")', '@Url.Content("~/Images/kruszywa/piasek_plukany_05-2.jpg")', 'piasek płukany 0,5-2', 'ofertaImage'),
+                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/mieszanka_do_betonu_0-16_195x145.jpg")', '@Url.Content("~/Images/kruszywa/mieszanka_do_betonu_0-16.jpg")', 'mieszanka do betonu 0-16', 'ofertaImage'),
+                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_2-8_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_2-8.jpg")', 'żwir 2-8', 'ofertaImage'),
+                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_2-16_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_2-16.jpg")', 'żwir 2-16', 'ofertaImage'),
+                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_8-16_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_8-16.jpg")', 'żwir 8-16', 'ofertaImage'),
+                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_16-35_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_16-35.jpg")', 'żwir 16-35', 'ofertaImage'),
+            
+
+            
+            ]);
+
+            self.ofertaOgrodniczaImageList = ko.observableArray([
+                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_16-32_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_16-32.jpg")', 'żwir 16-32', 'ofertaImage'),
+                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/glazy_195x145.jpg")', '@Url.Content("~/Images/kruszywa/glazy.jpg")', 'głazy', 'ofertaImage'),
+                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/torf_195x145.jpg")', '@Url.Content("~/Images/kruszywa/torf.jpg")', 'torf', 'ofertaImage'),
+            
+            ]);
+
+            self.ofertaBudowlanaWierszeKolumny = ko.computed(function () {
+                return podzielNaWierszeKolumny(self.ofertaBudowlanaImageList());
+            });
+
+            self.ofertaOgrodniczaWierszeKolumny = ko.computed(function () {
+                return podzielNaWierszeKolumny(self.ofertaOgrodniczaImageList());
+            });
+
+        };
+
+
+        $(document).ready(function () {
+            ko.applyBindings(new OfertaImageViewModel());
+        });
+    </script>
+}
