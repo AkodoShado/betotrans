@@ -301,6 +301,16 @@
     <Content Include="Images\piasek3.jpg" />
     <Content Include="Images\piasek3.png" />
     <Content Include="Images\piasek333.jpg" />
+    <Content Include="Images\referencje\basfer.png" />
+    <Content Include="Images\referencje\betronika.jpg" />
+    <Content Include="Images\referencje\geo-bruk.png" />
+    <Content Include="Images\referencje\Geo-Bud.png" />
+    <Content Include="Images\referencje\gmina_jezow.png" />
+    <Content Include="Images\referencje\gmina_puszcza_marianska.png" />
+    <Content Include="Images\referencje\hata_plus .png" />
+    <Content Include="Images\referencje\KAMPOL.jpg" />
+    <Content Include="Images\referencje\lasy_panstwowe_nadlesnictwo_radziwillow.jpg" />
+    <Content Include="Images\referencje\Powiatowy_Zarzad_Drog_w_Zyrardowie.png" />
     <Content Include="Images\spacer.gif" />
     <Content Include="Images\stopka.jpg" />
     <Content Include="Images\t1.jpg" />
@@ -347,6 +357,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Home\Reference.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

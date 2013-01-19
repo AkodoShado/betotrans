@@ -32,6 +32,7 @@
                 <li><a href="@Url.Action("About", "Home")">O firmie</a></li>
                 <li><a href="#">Jak działamy</a></li>
                 <li><a href="@Url.Action("Offer", "Home")">Oferta</a></li>
+                <li><a href="@Url.Action("Reference", "Home")">Zaufali nam</a></li>
                 <li><a href="@Url.Action("Contact", "Home")">Kontakt</a></li>
             </ul>  
     </div>
@@ -106,8 +107,8 @@
 
 <script type="text/javascript">
 
-    var podzielNaWierszeKolumny = function (listaDoPodzialu) {
-        var itemsPerRow = 3, rowIndex = 0, listaWierszeKolumny = [];
+    var podzielNaWierszeKolumny = function (listaDoPodzialu, itemsPerRow) {
+        var rowIndex = 0, listaWierszeKolumny = [];
 
         for (var index = 0; index < listaDoPodzialu.length; index++) {
             if (!listaWierszeKolumny[rowIndex])
@@ -121,6 +122,14 @@
 
         return listaWierszeKolumny;
     }
+
+    var GaleriaObrazek = function (miniSrc, src, title, styleClass) {
+        var self = this;
+        self.miniSrc = miniSrc;
+        self.src = src;
+        self.title = title;
+        self.styleClass = styleClass;
+    };
 
     $(document).ready(function () {
 

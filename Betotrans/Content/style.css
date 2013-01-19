@@ -65,21 +65,25 @@ img{ border:0; }
     text-align: center;
 }
 
+.tabelkaReferencje{ margin:10px;}
+.tabelkaReferencje td
+{ 
+    padding:5px 10px; 
+    text-align: center;
+    vertical-align:bottom
+}
 
-a{color:#FF9900;}
+
+a{
+    color:#FF9900;
+    text-decoration:none;
+}
 
 .stopka{
 	background:url(../images/stopka.jpg) no-repeat; 
 	font-size:11px; 
 	color:#46798C;
 	padding:25px 50px 50px 70px;
-}
-
-
-.modalPicture
-{
-    cursor:pointer;
-    cursor:hand;
 }
 
 .podpisPodOfera
