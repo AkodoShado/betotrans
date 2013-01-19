@@ -6,12 +6,15 @@
 <div class="right">
 			<div class="tekst">
             	<h1 class="ng">Sprzedaż kruszyw do celów budowlanych</h1>
-                 <table id="tabelaOferta" class="tabelka" style="width:95%;">
+                 <table class="tabelka" style="width:95%;">
                      <tbody data-bind="foreach: ofertaBudowlanaWierszeKolumny">
                          <tr>
                              <!-- ko foreach: $data -->
                                 <td>
-                                    <a class="fancybox" rel="budowlane" data-bind="attr:{title: title, href : src}"><img data-bind="attr:{src:miniSrc, alt:title}"/></a>
+                                    <a class="fancybox" rel="oferta" data-bind="attr:{title: title, href : src}">
+                                        <img data-bind="attr:{src:miniSrc, alt:title}"/>
+                                        <strong><label data-bind="text:title"/></strong>
+                                    </a>
                                 </td>
                              <!-- /ko -->
                          </tr>
@@ -19,15 +22,33 @@
 				</table>
 				
 				<h1 class="ng">Sprzedaż kruszyw do celów drogowych</h1>
+
+                 <table class="tabelka" style="width:95%;">
+                     <tbody data-bind="foreach: ofertaDrogowaWierszeKolumny">
+                         <tr>
+                             <!-- ko foreach: $data -->
+                                <td>
+                                    <a class="fancybox" rel="oferta" data-bind="attr:{title: title, href : src}">
+                                        <img data-bind="attr:{src:miniSrc, alt:title}" />
+                                        <strong><label data-bind="text:title"/></strong>
+                                    </a>
+                                </td>
+                             <!-- /ko -->
+                         </tr>
+                     </tbody>
+				</table>
 				
 				<h1 class="ng">Sprzedaż materiałów do celów ogrodniczych</h1>
 
-                 <table id="Table1" class="tabelka" style="width:95%;">
+                 <table class="tabelka" style="width:95%;">
                      <tbody data-bind="foreach: ofertaOgrodniczaWierszeKolumny">
                          <tr>
                              <!-- ko foreach: $data -->
                                 <td>
-                                    <a class="fancybox" rel="groupaBudowlana" data-bind="attr:{title: title, href : src}"><img data-bind="attr:{src:miniSrc, alt:title}" /></a>
+                                    <a class="fancybox" rel="oferta" data-bind="attr:{title: title, href : src}">
+                                        <img data-bind="attr:{src:miniSrc, alt:title}" />
+                                        <strong><label data-bind="text:title"/></strong>
+                                    </a>
                                 </td>
                              <!-- /ko -->
                          </tr>
@@ -44,45 +65,46 @@
 
 @section scripts{
     <script type="text/javascript">
-        var OfertaImages = function (miniSrc, src, title, styleClass) {
-            var self = this;
-            self.miniSrc = miniSrc;
-            self.src = src;
-            self.title = title;
-            self.styleClass = styleClass;
-        };
+
 
         var OfertaImageViewModel = function () {
             var self = this;
 
             self.ofertaBudowlanaImageList = ko.observableArray([
-                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/pospolka_195x145.jpg")', '@Url.Content("~/Images/kruszywa/pospolka.jpg")', 'pospółka', 'ofertaImage'),
-                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/piasek_kopalniany_195x145.jpg")', '@Url.Content("~/Images/kruszywa/piasek_kopalniany.jpg")', 'piasek kopalniany', 'ofertaImage'),
-                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/piasek_plukany_0-2_195x145.jpg")', '@Url.Content("~/Images/kruszywa/piasek_plukany_0-2.jpg")', 'piasek płukany 0-2', 'ofertaImage'),
-                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/piasek_plukany_05-2_195x145.jpg")', '@Url.Content("~/Images/kruszywa/piasek_plukany_05-2.jpg")', 'piasek płukany 0,5-2', 'ofertaImage'),
-                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/mieszanka_do_betonu_0-16_195x145.jpg")', '@Url.Content("~/Images/kruszywa/mieszanka_do_betonu_0-16.jpg")', 'mieszanka do betonu 0-16', 'ofertaImage'),
-                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_2-8_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_2-8.jpg")', 'żwir 2-8', 'ofertaImage'),
-                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_2-16_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_2-16.jpg")', 'żwir 2-16', 'ofertaImage'),
-                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_8-16_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_8-16.jpg")', 'żwir 8-16', 'ofertaImage'),
-                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_16-35_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_16-35.jpg")', 'żwir 16-35', 'ofertaImage'),
-            
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/pospolka_195x145.jpg")', '@Url.Content("~/Images/kruszywa/pospolka.jpg")', 'pospółka', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/piasek_kopalniany_195x145.jpg")', '@Url.Content("~/Images/kruszywa/piasek_kopalniany.jpg")', 'piasek kopalniany', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/piasek_plukany_0-2_195x145.jpg")', '@Url.Content("~/Images/kruszywa/piasek_plukany_0-2.jpg")', 'piasek płukany 0-2', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/piasek_plukany_05-2_195x145.jpg")', '@Url.Content("~/Images/kruszywa/piasek_plukany_05-2.jpg")', 'piasek płukany 0,5-2', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/mieszanka_do_betonu_0-16_195x145.jpg")', '@Url.Content("~/Images/kruszywa/mieszanka_do_betonu_0-16.jpg")', 'mieszanka do betonu 0-16', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/zwir_2-8_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_2-8.jpg")', 'żwir 2-8', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/zwir_2-16_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_2-16.jpg")', 'żwir 2-16', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/zwir_8-16_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_8-16.jpg")', 'żwir 8-16', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/zwir_16-35_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_16-35.jpg")', 'żwir 16-35', 'ofertaImage'),
+            ]);
 
-            
+            self.ofertaDrogowaImageList = ko.observableArray([
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/kwarcyt_195x145.jpg")', '@Url.Content("~/Images/kruszywa/kwarcyt.jpg")', 'kwarcyt', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/dolomit_195x145.jpg")', '@Url.Content("~/Images/kruszywa/dolomit.jpg")', 'dolomit', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/wapien_195x145.jpg")', '@Url.Content("~/Images/kruszywa/wapien.jpg")', 'wapień', 'ofertaImage'),
             ]);
 
             self.ofertaOgrodniczaImageList = ko.observableArray([
-                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/zwir_16-32_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_16-32.jpg")', 'żwir 16-32', 'ofertaImage'),
-                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/glazy_195x145.jpg")', '@Url.Content("~/Images/kruszywa/glazy.jpg")', 'głazy', 'ofertaImage'),
-                new OfertaImages('@Url.Content("~/Images/kruszywa/mini/torf_195x145.jpg")', '@Url.Content("~/Images/kruszywa/torf.jpg")', 'torf', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/zwir_16-32_195x145.jpg")', '@Url.Content("~/Images/kruszywa/zwir_16-32.jpg")', 'żwir 16-32', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/glazy_195x145.jpg")', '@Url.Content("~/Images/kruszywa/glazy.jpg")', 'głazy', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/kruszywa/mini/torf_195x145.jpg")', '@Url.Content("~/Images/kruszywa/torf.jpg")', 'torf', 'ofertaImage'),
             
             ]);
 
             self.ofertaBudowlanaWierszeKolumny = ko.computed(function () {
-                return podzielNaWierszeKolumny(self.ofertaBudowlanaImageList());
+                return podzielNaWierszeKolumny(self.ofertaBudowlanaImageList(), 3);
+            });
+
+            self.ofertaDrogowaWierszeKolumny = ko.computed(function () {
+                return podzielNaWierszeKolumny(self.ofertaDrogowaImageList(), 3);
             });
 
             self.ofertaOgrodniczaWierszeKolumny = ko.computed(function () {
-                return podzielNaWierszeKolumny(self.ofertaOgrodniczaImageList());
+                return podzielNaWierszeKolumny(self.ofertaOgrodniczaImageList(), 3);
             });
 
         };
