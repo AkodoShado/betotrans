@@ -8,20 +8,33 @@
             var self = this;
 
             self.ofertaOgrodniczaImageList = ko.observableArray([
-                new GaleriaObrazek('@Url.Content("~/Images/referencje/basfer.png")', '@Url.Content("~/Images/referencje/basfer.png")', 'Basfer', 'ofertaImage'),
-                new GaleriaObrazek('@Url.Content("~/Images/referencje/betronika.jpg")', '@Url.Content("~/Images/referencje/betronika.jpg")', 'Betoniarnia Betronika', 'ofertaImage'),
-                new GaleriaObrazek('@Url.Content("~/Images/referencje/geo-bruk.png")', '@Url.Content("~/Images/referencje/geo-bruk.png")', 'Geo-Bruk', 'ofertaImage'),
-                new GaleriaObrazek('@Url.Content("~/Images/referencje/Geo-Bud.png")', '@Url.Content("~/Images/referencje/Geo-Bud.png")', 'Geo-Bud s.c.', 'ofertaImage'),
-                new GaleriaObrazek('@Url.Content("~/Images/referencje/gmina_jezow.png")', '@Url.Content("~/Images/referencje/gmina_jezow.png")', 'Gmina Jeżów', 'ofertaImage'),
-                new GaleriaObrazek('@Url.Content("~/Images/referencje/gmina_puszcza_marianska.png")', '@Url.Content("~/Images/referencje/gmina_puszcza_marianska.png")', 'Gmina Puszcza Mariańska', 'ofertaImage'),
-                new GaleriaObrazek('@Url.Content("~/Images/referencje/lasy_panstwowe_nadlesnictwo_radziwillow.jpg")', '@Url.Content("~/Images/referencje/basfer.png")', 'Lasy Państwowe Nadleśnictwo Radziwiłłów', 'ofertaImage'),
-                new GaleriaObrazek('@Url.Content("~/Images/referencje/Powiatowy_Zarzad_Drog_w_Zyrardowie.png")', '@Url.Content("~/Images/referencje/basfer.png")', 'Powiatowy Zarząd Dróg w Żyrardowie', 'ofertaImage'),
-                new GaleriaObrazek('@Url.Content("~/Images/referencje/hata_plus .png")', '@Url.Content("~/Images/referencje/basfer.png")', 'P.P.H.U. HATA PLUS', 'ofertaImage'),
-                new GaleriaObrazek('@Url.Content("~/Images/referencje/KAMPOL.jpg")', '@Url.Content("~/Images/referencje/basfer.png")', 'P.U.H. KAMPOL Stabilizacje Gruntu', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/basfer.png")', '', 'Basfer', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/betronika.jpg")', '', 'Betoniarnia Betronika', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/geo-bruk.png")', '', 'Geo-Bruk', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/Geo-Bud.png")', '', 'Geo-Bud s.c.', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/gmina_jezow.png")', '', 'Gmina Jeżów', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/gmina_puszcza_marianska.png")', '', 'Gmina Puszcza Mariańska', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/lasy_panstwowe_nadlesnictwo_radziwillow.jpg")', '', 'Lasy Państwowe Nadleśnictwo Radziwiłłów', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/Powiatowy_Zarzad_Drog_w_Zyrardowie.png")', '', 'Powiatowy Zarząd Dróg w Żyrardowie', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/hata_plus .png")', '', 'P.P.H.U. HATA PLUS', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/KAMPOL.jpg")', '', 'P.U.H. KAMPOL Stabilizacje Gruntu', 'ofertaImage'),
+            ]);
+
+            self.referencjaPapierowaImageList = ko.observableArray([
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/papierowe/mini/referencja_gmina_jezow.jpg")', '@Url.Content("~/Images/referencje/papierowe/referencja_gmina_jezow.jpg")', 'Gmina Jeżów', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/papierowe/mini/referencja_gmina_puszcza_marianska_1.jpg")', '@Url.Content("~/Images/referencje/papierowe/referencja_gmina_puszcza_marianska_1.jpg")', 'Gmina Puszcza Mariańska', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/papierowe/mini/referencja_gmina_puszcza_marianska_2.jpg")', '@Url.Content("~/Images/referencje/papierowe/referencja_gmina_puszcza_marianska_2.jpg")', 'Gmina Puszcza Mariańska', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/papierowe/mini/referencja_gmina_puszcza_marianska_3.jpg")', '@Url.Content("~/Images/referencje/papierowe/referencja_gmina_puszcza_marianska_3.jpg")', 'Gmina Puszcza Mariańska', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/papierowe/mini/referencja_nadlesnictwo_radziwillow.jpg")', '@Url.Content("~/Images/referencje/papierowe/referencja_nadlesnictwo_radziwillow.jpg")', 'Nadleśnictwo Radziwiłłów', 'ofertaImage'),
+                new GaleriaObrazek('@Url.Content("~/Images/referencje/papierowe/mini/referencja_inn-bud.jpg")', '@Url.Content("~/Images/referencje/papierowe/referencja_inn-bud.jpg")', 'Inn-Bud', 'ofertaImage'),
             ]);
 
             self.ofertaOgrodniczaWierszeKolumny = ko.computed(function () {
                 return podzielNaWierszeKolumny(self.ofertaOgrodniczaImageList(), 3);
+            });
+
+            self.referencjaPapierowaWierszeKolumny = ko.computed(function () {
+                return podzielNaWierszeKolumny(self.referencjaPapierowaImageList(), 5);
             });
 
         };
@@ -46,6 +59,24 @@
                                 <td>
                                     <img data-bind="attr:{src:miniSrc, alt:title, title:title}" /><br />
                                     <label data-bind="text:title"></label>
+                                </td>
+                                <!-- /ko -->
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <br />
+                    <br />
+
+                    <table class="tabelkaReferencjePapierowe" style="width: 95%;">
+                        <tbody data-bind="foreach: referencjaPapierowaWierszeKolumny">
+                            <tr>
+                                <!-- ko foreach: $data -->
+                                <td>
+                                    <a class="fancybox" rel="referencjePapierowe" data-bind="attr:{title: title, href : src}">
+                                        <img data-bind="attr:{src:miniSrc, alt:title}" />
+                                        <strong><label data-bind="text:title"/></strong>
+                                    </a>
                                 </td>
                                 <!-- /ko -->
                             </tr>

@@ -65,12 +65,26 @@ img{ border:0; }
     text-align: center;
 }
 
-.tabelkaReferencje{ margin:10px;}
+.tabelkaReferencje
+{ 
+    margin:10px;
+}
 .tabelkaReferencje td
 { 
     padding:5px 10px; 
     text-align: center;
-    vertical-align:bottom
+    vertical-align:bottom;
+}
+
+.tabelkaReferencjePapierowe
+{ 
+    margin:10px;
+}
+.tabelkaReferencjePapierowe td
+{ 
+    padding:5px 10px; 
+    text-align: center;
+    vertical-align:top;
 }
 
 
