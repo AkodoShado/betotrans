@@ -238,6 +238,7 @@
     <Content Include="Images\droga_do_kopalni.JPG" />
     <Content Include="Images\droga_do_kopalni_191x108.png" />
     <Content Include="Images\koparka.jpg" />
+    <Content Include="Images\kruszywa\dolomit.jpg" />
     <Content Include="Images\kruszywa\glazy.jpg" />
     <Content Include="Images\kruszywa\kruszywa_1.jpg" />
     <Content Include="Images\kruszywa\kruszywa_11.jpg" />
@@ -248,8 +249,11 @@
     <Content Include="Images\kruszywa\kruszywa_4.jpg" />
     <Content Include="Images\kruszywa\kruszywa_5.jpg" />
     <Content Include="Images\kruszywa\kruszywa_6.jpg" />
+    <Content Include="Images\kruszywa\kwarcyt.jpg" />
     <Content Include="Images\kruszywa\mieszanka_do_betonu_0-16.jpg" />
+    <Content Include="Images\kruszywa\mini\dolomit_195x145.jpg" />
     <Content Include="Images\kruszywa\mini\glazy_195x145.jpg" />
+    <Content Include="Images\kruszywa\mini\kwarcyt_195x145.jpg" />
     <Content Include="Images\kruszywa\mini\mieszanka_do_betonu_0-16_195x145.jpg" />
     <Content Include="Images\kruszywa\mini\piasek_0-2_195x145.jpg" />
     <Content Include="Images\kruszywa\mini\piasek_kopalniany_195x145.jpg" />
@@ -257,6 +261,7 @@
     <Content Include="Images\kruszywa\mini\piasek_plukany_0-2_195x145.jpg" />
     <Content Include="Images\kruszywa\mini\pospolka_195X145.jpg" />
     <Content Include="Images\kruszywa\mini\torf_195x145.jpg" />
+    <Content Include="Images\kruszywa\mini\wapien_195x145.jpg" />
     <Content Include="Images\kruszywa\mini\zwir_16-32_195x145.jpg" />
     <Content Include="Images\kruszywa\mini\zwir_16-35_195x145.jpg" />
     <Content Include="Images\kruszywa\mini\zwir_2-16_195x145.jpg" />
@@ -268,6 +273,7 @@
     <Content Include="Images\kruszywa\piasek_plukany_0-2.jpg" />
     <Content Include="Images\kruszywa\pospolka.jpg" />
     <Content Include="Images\kruszywa\torf.jpg" />
+    <Content Include="Images\kruszywa\wapien.jpg" />
     <Content Include="Images\kruszywa\zwir_16-32.jpg" />
     <Content Include="Images\kruszywa\zwir_16-35.jpg" />
     <Content Include="Images\kruszywa\zwir_2-16.jpg" />
