@@ -14,6 +14,12 @@ namespace Betotrans
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Pospółka",
+                url: "Kruszywo-Pospolka",
+                defaults: new { controller = "Home", action = "Aggregate", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Oferta",
                 url: "Sprzedaz-kruszyw",
                 defaults: new { controller = "Home", action = "Offer", id = UrlParameter.Optional }

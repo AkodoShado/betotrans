@@ -10,10 +10,16 @@ namespace Betotrans.Controllers
     {
         public ActionResult Index()
         {
-            return View("Offer");
+            Response.Redirect(Url.Content("Sprzedaz-kruszyw"));
+            return View();
         }
 
         public ActionResult Offer()
+        {
+            return View();
+        }
+
+        public ActionResult Aggregate()
         {
             return View();
         }
