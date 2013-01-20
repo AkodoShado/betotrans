@@ -15,13 +15,13 @@ namespace Betotrans
 
             routes.MapRoute(
                 name: "Oferta",
-                url: "Oferta",
+                url: "Sprzedaz-kruszyw",
                 defaults: new { controller = "Home", action = "Offer", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(
                 name: "ZaufaliNam",
-                url: "Zaufali_Nam",
+                url: "Zaufali-Nam",
                 defaults: new { controller = "Home", action = "Reference", id = UrlParameter.Optional }
             );
 
@@ -33,7 +33,7 @@ namespace Betotrans
 
             routes.MapRoute(
                 name: "OFirmie",
-                url: "O_Firmie",
+                url: "O-Firmie",
                 defaults: new { controller = "Home", action = "About", id = UrlParameter.Optional }
             );
 

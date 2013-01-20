@@ -64,10 +64,11 @@
                             </tr>
                         </tbody>
                     </table>
-                    <br />
-                    <br />
-                    <br />
-
+                </p>
+            </div>
+            <h1 class="ng">Wybrane referencje</h1>
+            <div>
+                <p class="articleText">
                     <table class="tabelkaReferencjePapierowe" style="width: 95%;">
                         <tbody data-bind="foreach: referencjaPapierowaWierszeKolumny">
                             <tr>
@@ -75,7 +76,9 @@
                                 <td>
                                     <a class="fancybox" rel="referencjePapierowe" data-bind="attr:{title: title, href : src}">
                                         <img data-bind="attr:{src:miniSrc, alt:title}" />
-                                        <strong><label data-bind="text:title"/></strong>
+                                        <strong>
+                                            <label data-bind="text:title" />
+                                        </strong>
                                     </a>
                                 </td>
                                 <!-- /ko -->
