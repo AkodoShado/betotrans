@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>@ViewBag.Title - Beto-Trans</title>
 <meta name="Description" content="Firma BETO-TRANS specjalizuje się w wydobywaniu, uszlachetnianiu i transporcie kruszyw do celów budowlanych, drogowych oraz ogrodniczych. Zajmuje się także budową dróg, świadczy usługi koparką, ładowarką oraz HDS." />
-<meta name="keywords" content="Sprzedaż kruszyw do celów budowlanych, piasek płukany 0-2, żwir 2-8, żwir 8-16, żwir 2-16, mieszanka 0-16, pospółka, piasek kopalniany, podsyp, Sprzedaż kruszyw do celów drogowych, kruszywo kwarcytowe, kruszywo wapienne, kruszywo dolomitowe, Sprzedaż materiałów do celów ogrodniczych, żwir 16-32, otoczaki, głazy, ziemia, torf, Sprzedaż materiałów budowlanych: cement, Usługi transportowe samochodami samowyładowczymi, Usługi HDS, Wynajem koparki i ładowarki" />
+<meta name="keywords" content="piasek płukany, żwir, pospółka, piasek kopalniany, podsyp, kruszywo kwarcytowe, kruszywo wapienne, kruszywo dolomitowe, otoczaki, głazy, ziemia, torf, cement" />
 <meta name="Author" content="IT Consulting Kamil Wysocki" />
 <meta name="Robots" content="ALL" />
 <meta name="revisit-after" content="10" />
@@ -24,10 +24,11 @@
 
 
 <div class="pds">
-	<div><img src="@Url.Content("~/Images/t1.jpg")" alt="" usemap="#top" /></div>
-    <div><img src="@Url.Content("~/Images/piasek333.jpg")" alt="" /></div>
+	<div><img src="@Url.Content("~/Images/t1.jpg")" alt="Beto-Trans" tile="Beto-Trans" usemap="#top" /></div>
+    <div class="topLogo"><img src="@Url.Content("~/Images/piasek333.jpg")" alt="Beto-Trans" title="Beto-Trans" /></div>
     <div class="menu">
             <ul>
+                @*<li><a href="@Url.Action("Index", "Home")">Strona główna</a></li>*@
                 <li><a href="@Url.Action("About", "Home")">O firmie</a></li>
                 <!-- <li><a href="#">Jak działamy</a></li> -->
                 <li><a href="@Url.Action("Offer", "Home")">Oferta</a></li>
@@ -37,22 +38,22 @@
     </div>
 	<div class="s">
 		<div class="left">
-            <a class="fancybox" rel="grupaLewyPanel" href="@Url.Content("~/Images/mapa.jpg")" title="mapa">
+            <a class="fancybox" rel="nofollow" href="@Url.Content("~/Images/mapa.jpg")" title="mapa">
                 <img style="margin-top:30px;" src="@Url.Content("~/Images/mapa_191x108.png")" alt="mapa" title="mapa" />
             </a>
-            <a class="fancybox" rel="grupaLewyPanel" href="@Url.Content("~/Images/maszyny/wiertnica2.JPG")" title="wiercenia">
+            <a class="fancybox" rel="nofollow" href="@Url.Content("~/Images/maszyny/wiertnica2.JPG")" title="wiercenia">
                 <img style="margin-top:30px;" src="@Url.Content("~/Images/maszyny/mini/wiertnica2_191x109.JPG")" alt="wiercenia" title="wiercenia" />
             </a>
-            <a class="fancybox" rel="grupaLewyPanel" href="@Url.Content("~/Images/droga_do_kopalni.JPG")" title="droga do kopalni">
+            <a class="fancybox" rel="nofollow" href="@Url.Content("~/Images/droga_do_kopalni.JPG")" title="droga do kopalni">
                 <img style="margin-top:30px;" src="@Url.Content("~/Images/droga_do_kopalni_191x108.png")" alt="droga do kopalni" title="droga do kopalni" />
             </a>
-            <a class="fancybox" rel="grupaLewyPanel" href="@Url.Content("~/Images/maszyny/Scania.JPG")" title="Scania">
+            <a class="fancybox" rel="nofollow" href="@Url.Content("~/Images/maszyny/Scania.JPG")" title="Scania">
                 <img style="margin-top:30px;" src="@Url.Content("~/Images/maszyny/mini/Scania_191x108.JPG")" alt="Scania" title="Scania" />
             </a>
-            <a class="fancybox" rel="grupaLewyPanel" href="@Url.Content("~/Images/maszyny/urzadzenia_do_uszlachetniania_kopaliny.JPG")" title="urządzenia do uszlachetniania kopaliny">
+            <a class="fancybox" rel="nofollow" href="@Url.Content("~/Images/maszyny/urzadzenia_do_uszlachetniania_kopaliny.JPG")" title="urządzenia do uszlachetniania kopaliny">
                 <img style="margin-top:30px;" src="@Url.Content("~/Images/maszyny/mini/urzadzenia_do_uszlachetniania_kopaliny_191x108.JPG")" alt="urządzenia do uszlachetniania kopaliny" title="urządzenia do uszlachetniania kopaliny" />
             </a>
-            <a class="fancybox" rel="grupaLewyPanel" href="@Url.Content("~/Images/maszyny/sortownik_kruszarki.JPG")" title="sortownik i kruszarki">
+            <a class="fancybox" rel="nofollow" href="@Url.Content("~/Images/maszyny/sortownik_kruszarki.JPG")" title="sortownik i kruszarki">
                 <img style="margin-top:30px;" src="@Url.Content("~/Images/maszyny/mini/sortownik_kruszarki_191x108.JPG")" alt="sortownik i kruszarki" title="sortownik i kruszarki" />
             </a>
 		</div>
@@ -89,7 +90,7 @@
     
     
     <map name="top" id="top">
-        <area shape="rect" coords="49,52,314,122" href="@Url.Action("Index", "Home")" alt="" />
+        <area shape="rect" coords="49,52,314,122" href="@Url.Action("Index", "Home")" alt="Beto-Trans" title="Beto-Trans" />
         <area shape="rect" coords="623,67,752,104" href="@Url.Action("Offer", "Home")" alt="" />
         <area shape="rect" coords="760,70,835,104" href="@Url.Action("About", "Home")" alt="" />
         <area shape="rect" coords="850,71,940,104" href="@Url.Action("Contact", "Home")" alt="" />

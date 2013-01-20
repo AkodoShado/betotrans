@@ -5,41 +5,42 @@
 @section Body {
 <div class="right">
 			<div class="tekst">
-            	<h1 class="ng">Sprzedaż kruszyw do celów budowlanych</h1>
-                 <table class="tabelka" style="width:95%;">
-                     <tbody data-bind="foreach: ofertaBudowlanaWierszeKolumny">
-                         <tr>
-                             <!-- ko foreach: $data -->
-                                <td>
-                                    <a class="fancybox" rel="oferta" data-bind="attr:{title: title, href : src}">
-                                        <img data-bind="attr:{src:miniSrc, alt:title}"/>
-                                        <strong><label data-bind="text:title"/></strong>
-                                    </a>
-                                </td>
-                             <!-- /ko -->
-                         </tr>
-                     </tbody>
-				</table>
-				
-				<h1 class="ng">Sprzedaż kruszyw do celów drogowych</h1>
-
-                 <table class="tabelka" style="width:95%;">
-                     <tbody data-bind="foreach: ofertaDrogowaWierszeKolumny">
-                         <tr>
-                             <!-- ko foreach: $data -->
-                                <td>
-                                    <a class="fancybox" rel="oferta" data-bind="attr:{title: title, href : src}">
-                                        <img data-bind="attr:{src:miniSrc, alt:title}" />
-                                        <strong><label data-bind="text:title"/></strong>
-                                    </a>
-                                </td>
-                             <!-- /ko -->
-                         </tr>
-                     </tbody>
-				</table>
-				
+                <section>
+            	    <h1 class="ng">Sprzedaż kruszyw do celów budowlanych</h1>
+                     <table class="tabelka" style="width:95%;">
+                         <tbody data-bind="foreach: ofertaBudowlanaWierszeKolumny">
+                             <tr>
+                                 <!-- ko foreach: $data -->
+                                    <td>
+                                        <a class="fancybox" rel="oferta" data-bind="attr:{title: title, href : src}">
+                                            <img data-bind="attr:{src:miniSrc, alt:title}"/>
+                                            <strong><label data-bind="text:title"/></strong>
+                                        </a>
+                                    </td>
+                                 <!-- /ko -->
+                             </tr>
+                         </tbody>
+				    </table>
+				</section>
+                <section>
+				    <h1 class="ng">Sprzedaż kruszyw do celów drogowych</h1>
+                     <table class="tabelka" style="width:95%;">
+                         <tbody data-bind="foreach: ofertaDrogowaWierszeKolumny">
+                             <tr>
+                                 <!-- ko foreach: $data -->
+                                    <td>
+                                        <a class="fancybox" rel="oferta" data-bind="attr:{title: title, href : src}">
+                                            <img data-bind="attr:{src:miniSrc, alt:title}" />
+                                            <strong><label data-bind="text:title"/></strong>
+                                        </a>
+                                    </td>
+                                 <!-- /ko -->
+                             </tr>
+                         </tbody>
+				    </table>
+				</section>
+                <section>
 				<h1 class="ng">Sprzedaż materiałów do celów ogrodniczych</h1>
-
                  <table class="tabelka" style="width:95%;">
                      <tbody data-bind="foreach: ofertaOgrodniczaWierszeKolumny">
                          <tr>
@@ -54,10 +55,16 @@
                          </tr>
                      </tbody>
 				</table>
-
-                <h1 class="ng">Usługi transportowe samochodami samowyładowczymi</h1>
-                <h1 class="ng">Usługi HDS</h1>
-                <h1 class="ng">Wynajem koparki i ładowarki</h1>
+                </section>
+                <section>
+                    <h1 class="ng">Usługi transportowe samochodami samowyładowczymi</h1>
+                </section>
+                <section>
+                    <h1 class="ng">Usługi HDS</h1>
+                </section>
+                <section>
+                    <h1 class="ng">Wynajem koparki i ładowarki</h1>
+                </section>
             </div>
 		</div>
 }
