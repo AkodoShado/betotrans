@@ -111,6 +111,18 @@ a{
 
 .articleText
 {
-    text-align: justify;
-	
+    text-align: justify;	
+}
+
+.agregateImage {
+}
+
+/*style dla 320px*/ 
+@media all and (max-width: 320px) {
+    .topLogo {
+        display:none;
+    }
+    .left {
+        display:none;
+    }
 }
