@@ -24,7 +24,7 @@
 
 
 <div class="pds">
-	<div><img src="@Url.Content("~/Images/t1.jpg")" alt="Beto-Trans" tile="Beto-Trans" usemap="#top" /></div>
+	<div><img src="@Url.Content("~/Images/t1.jpg")" alt="Beto-Trans" title="Beto-Trans" usemap="#top" /></div>
     <div class="topLogo"><img src="@Url.Content("~/Images/piasek333.jpg")" alt="Beto-Trans" title="Beto-Trans" /></div>
     <div class="menu">
             <ul>
@@ -123,12 +123,14 @@
         return listaWierszeKolumny;
     }
 
-    var GaleriaObrazek = function (miniSrc, src, title, styleClass) {
+    var GaleriaObrazek = function (miniSrc, src, title, styleClass, name) {
         var self = this;
+        self.name = name;
         self.miniSrc = miniSrc;
         self.src = src;
         self.title = title;
         self.styleClass = styleClass;
+        self.url = '@Url.Action("Kruszywo", "Home")' + '-' + name;
     };
 
     $(document).ready(function () {

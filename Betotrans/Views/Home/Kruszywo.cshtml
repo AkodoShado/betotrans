@@ -1,0 +1,28 @@
+﻿@model Betotrans.Models.KruszywoViewModel
+@{
+    ViewBag.Title = @Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section body{
+    <div class="right">
+        <article class="articleText">
+            <h1 class="ng">@Model.Title</h1>
+                <figure class="articleText" style="float:left">
+                    <a class="fancybox" href="@Url.Content(Model.Img)" title="@Model.Title">
+                        
+                    <img class="agregateImage" style="display:block" src="@Model.MiniImg" alt="@Model.Title" title="@Model.Title"/> 
+                        <!-- <figcaption style="float:left" >Pospółka</figcaption><br /> -->
+                    </a>
+                    
+                </figure>
+                <p class="articleText">
+                    <br />
+                    <b>Uziarnienie graniczne:</b> @Model.Size<br />
+                    <b>Przeznaczenie do:</b> @Model.IntendedFor <br />
+                    <br />
+                    @Model.Description<br />
+                </p>
+        </article>
+    </div>
+}
