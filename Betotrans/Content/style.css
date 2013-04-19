@@ -89,7 +89,6 @@ img{ border:0; }
 
 
 a{
-    color:#FF9900;
     text-decoration:none;
 }
 
@@ -112,9 +111,37 @@ a{
 .articleText
 {
     text-align: justify;	
+    margin:10px;
 }
 
 .agregateImage {
+    border-radius:12px;
+    box-shadow:3px 3px 5px;
+    background:#fff;
+    border:1px solid #323232;
+    color:#323232;
+}
+
+.offerImage{
+    border-radius:12px;
+    box-shadow:3px 3px 5px;
+    background:#fff;
+    border:1px solid #323232;
+    color:#323232;
+}
+
+figcaption {
+  padding: 5px;
+  font-family: 'Cherry Swash', cursive;
+  font-size: 1em;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+  word-wrap:normal;
+  text-align: center;
+}
+figcaption {
+  display: block;
 }
 
 /*style dla 320px*/ 
