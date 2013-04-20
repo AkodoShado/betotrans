@@ -6,3 +6,8 @@
 /Betotrans/bin
 /Betotrans/obj
 /*.suo
+
+/Betotrans.DataAccess/bin/Debug
+
+/Betotrans.DataAccess/bin/Release
+/Betotrans.DataAccess/obj

@@ -43,9 +43,17 @@ body{
 }
 .tekst{color:#386483;  }
 .tekst p{
-	margin:0;
+
 	padding:5px 10px;
+    text-align: justify;	
+    width:550px;
 }
+
+.center {
+    margin-left: auto;   
+    margin-right: auto;
+}
+
 .m-tlo{ background: url(../images/m2.gif) repeat-y; padding:5px; }
 
 .m{ list-style:none; margin:0; padding:0; }
